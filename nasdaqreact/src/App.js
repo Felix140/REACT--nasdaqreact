@@ -1,5 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
+import Stock from './components/Stock';
+import logo from './logo.svg';
 
 function App() {
   return (
@@ -17,6 +18,11 @@ function App() {
         >
           Learn React
         </a>
+
+        <Stock nome="TWITTER" fondatore="Elon Musk" eta={10}/>
+        <Stock nome="APPL" fondatore="SteveJobs" eta={24}/>
+        <Stock nome="AMAZON" fondatore="Jeff Bezos" eta={18}/>
+
       </header>
     </div>
   );
