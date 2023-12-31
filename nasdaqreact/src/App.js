@@ -20,8 +20,6 @@ function App() {
         </a>
 
         <Stock nome="TWITTER" fondatore="Elon Musk" eta={10}/>
-        <Stock nome="APPL" fondatore="SteveJobs" eta={24}/>
-        <Stock nome="AMAZON" fondatore="Jeff Bezos" eta={18}/>
 
       </header>
     </div>

@@ -19,15 +19,22 @@ export class Stock extends Component {
                 )
             )
 
+        let showEta = eta;
+        setInterval(() => {
+            showEta++;
+            console.log(showEta)
+        }, 3000)
+
         const stringaEta =
             (
-                eta >= 18 ? "Maggiorenne" : "Minorenne"
+                showEta >= 18 ? <h3>Maggiorenne</h3> : <h6>Minorenne</h6>
             )
 
         return (
             <div>
                 <h3>Figlio: {nome}</h3>
                 <p>fondatore: {fondatore}</p>
+                <p>eta: {showEta}</p>
                 <ul>
                     {listJSX}
                 </ul>
