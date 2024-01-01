@@ -6,11 +6,19 @@ export class Stock extends Component {
     constructor(props) {
         super(props);
         this.hobby = ["Hobby1", "Hobby2"];
+        this.state = { eta: props.eta }
+
+        setInterval(() => this.aggiornaEta(), 1000)
+    }
+
+    aggiornaEta() {
+        this.setState((state) => ({
+            eta: state.eta + 1
+        }));
     }
 
     render() {
-
-        const { nome, fondatore, eta } = this.props;
+        const { nome, fondatore } = this.props;
 
         const listJSX =
             (
@@ -19,11 +27,7 @@ export class Stock extends Component {
                 )
             )
 
-        let showEta = eta;
-        setInterval(() => {
-            showEta++;
-            console.log(showEta)
-        }, 3000)
+        let showEta = this.state.eta;
 
         const stringaEta =
             (
@@ -38,7 +42,7 @@ export class Stock extends Component {
                 <ul>
                     {listJSX}
                 </ul>
-                <p>{stringaEta}</p>
+                <div>{stringaEta}</div>
             </div>
         )
     }

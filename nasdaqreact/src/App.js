@@ -19,7 +19,12 @@ function App() {
           Learn React
         </a>
 
-        <Stock nome="TWITTER" fondatore="Elon Musk" eta={10}/>
+        <div className='Stock-container'>
+          <Stock nome="TWITTER" fondatore="Elon Musk" eta={10} />
+          <Stock nome="APPLE" fondatore="Jobs" eta={20} />
+          <Stock nome="AMZN" fondatore="Bezos" eta={40} />
+          <Stock nome="META" fondatore="Zukenberg" eta={6} />
+        </div>
 
       </header>
     </div>

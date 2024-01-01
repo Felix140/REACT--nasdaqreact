@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+.Stock-container {
+  display: flex;
+  flex-direction: row;
+  column-gap: 90px;
+}
